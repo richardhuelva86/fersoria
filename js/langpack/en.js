@@ -1,0 +1,18 @@
+﻿jquery_lang_js.prototype.lang.en = {
+	'Inicio':'Home',
+	'Objetivo':'Aim',
+	'Servicios':'Services',
+	'Precios':'Prices',
+	'¿Irlanda o España?':'Ireland or Spain?',
+	'Contacto':'Contact',
+	'Asesoramiento Financiero, Creación de Empresas en Irlanda y España, Registro de Autónomos, Contabilidad, Desarrollo de Páginas Web Corporativas.':'Financial Advice, Company Formation in Ireland and Spain, Sole Trader Registration, Accountancy, Corporate Website Development.',
+	'¿Quiere crear su propia empresa o registrarse como autónomo en Irlanda? ¿Le preocupan sus ahorros? ¿Necesita asesoramiento financiero o contable? Le ofrecemos nuestros servicios profesionales.':'Want to create your own business or register as a sole trader in Ireland? Worried about your savings? Need financial or accounting advice? We offer you our professional services.',
+	'Soy <span class="bold">Alejandro Fernández Soria</span>, fundador y propietario de <span class="bold">FERSORIA</span>. Hace años me fui a Irlanda con la intención de estudiar un tiempo y volver a España. Después de licenciarme decidí quedarme, pues hay algo en Isla Esmeralda que nos retiene a casi todos los que la pisamos.':'I am <span class="bold">Alejandro Fernández Soria</span>, founder and owner of <span class="bold">FERSORIA</span>. Years ago, I went to Ireland with the intention of studying and then return to Spain. After graduating, I decided to stay because there is something in the Emerald Isle that holds up anybody that steps on its land.',
+	'Hola a todos,':'Hi all,',
+	'Saludos cordiales.':'Best regards.',
+	'Nunca he dejado de seguir las noticias sobre la crisis económica de España y siempre he pensado que debía hacer algo desde aquí. Veo las ganas que tienen los españoles de seguir adelante, de trabajar, de crear empresas... Por ello he fundado <span class="bold">FERSORIA</span>, un negocio pensado para ayudar a todos  aquellos a los que el mercado laboral les ha dado la espalda y quieren empezar a trabajar en su propia empresa. ':'I have never stopped following the news about the economic crisis and I always thought I should do something about it. I see the will of the people  to move on, to work, to create a company... So I have founded <span class="bold">FERSORIA</span>, a business designed to help  those whom the labor market has turned its back on and  want to work in their own company.',
+	'Crear una empresa es una tarea ardua y pretendo allanar el camino a los que tienen el sueño de abrir la suya, o de trabajar como autónomos, y se topan con las barreras de la burocracia, los altos costes y la diferencia de idioma.':'Starting a company is a hard work and I intend to pave the way to the ones who have the dream of opening their own business, or being sole traders, and they encounter the barriers of bureaucracy, high costs and the language difference.',
+	'Junto con mi equipo de colaboradores, ofrezco en <span class="bold">FERSORIA</span> todo lo necesario para fundar una empresa y llevarla por el camino del éxito. Espero y deseo que trabajemos juntos.':'Together with my staff, I offer in <span class="bold">FERSORIA</span> everything you need to start a company and take the road to success. I look forward to working with you.',
+	'"images/isla.gif" alt="Cree su empresa en Irlanda"':'"images/island.gif" alt="Start your company in Ireland"',
+	'test':'prueba',
+}

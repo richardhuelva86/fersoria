@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>My Test Page</title>
+
+<!-- Librerías y .js-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
+
+<script src="js/langpack/es.js" charset="utf-8" type="text/javascript"></script>
+
+<!--Para dar soporte a más lenguajes  incluimos los ficheros correspondientes -->
+<!-- <script src="js/langpack/mo.js" charset="utf-8" type="text/javascript"></script> -->
+
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+window.lang = new jquery_lang_js();
+$().ready(function () {
+    window.lang.run();
+});
+</script>
+
+<span lang="en">Objectives</span>
+
+<a href="javascript:window.lang.change('es');">Switch to Spanish</a>
+<a href="javascript:window.lang.change('en');">Switch to English</a>
+
+</body>
+
+
+</html>

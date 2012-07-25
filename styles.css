@@ -1,0 +1,209 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+/* Tell the browser to render HTML 5 elements as block */
+footer, aside, nav, article{
+	display: block;
+}
+
+h1{
+	font-size: 28px;
+	line-height: 30px;
+	padding: 6px 0;
+	color:#3960AD;
+}
+
+h2{
+	font-size: 24px;
+	line-height: 30px;
+	color:#3960AD;
+}
+
+h3{
+	font-size: 20px;
+	color:#3960AD;
+}
+
+#main_title{
+	font-size:18px;
+	color:#3960AD;
+}
+
+.widget_gp{
+
+display:block;
+text-align:center;
+margin-left:50px;
+margin-top:50px;
+}
+.widget_min{
+display:block;
+margin-top:20px;
+text-align:center;
+margin:auto;
+}
+
+body{
+	margin: 0 auto;
+	width: 950px; /*940px;*/
+	font: 16px Helvetica, Arial, sans-serif;
+	background: #FFF;
+}
+
+nav{
+	position: absolute;
+	width: 948px; /*936px;*/
+	height: 40px;
+	background: url("images/nav_blue.jpg"); 
+	margin-top: 30px;
+	/*border-radius:6px;*/
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav ul li{
+	width: 158px;
+	float: left;
+	height: 40px;
+	padding: 0px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 40px; 
+	}
+
+	nav ul li a{
+		display: block;
+		text-decoration: none;
+		color: #fff;
+	}
+
+		nav ul li a:hover {  
+			background: url("images/nav_blue2.jpg"); 
+			/*border-radius: 6px;*/			
+        }  
+  
+#content{
+	float: bottom;
+	display: table;
+	padding: 90px 2px 10px 2px;
+	/*background-color: red;*/
+}
+
+	#mainContent{
+		display: table-cell;
+		/*table-layout: fixed;*/
+		width: 632px;
+		/*background: #5b5b5b;*/
+		padding-right: 15px;
+		border-radius: 8px;
+		vertical-align: top;
+	}
+
+	aside{
+		display: table-cell;
+		background-color: #B6CDFA; /*#FFE768; */
+		padding-top: 20px;
+		vertical-align: top;
+		width: 300px;
+		border-radius: 8px;
+	}
+
+#idiomas{
+	padding-left:100px;
+	border-style:none;
+}	
+	
+#logos{
+	padding-top: 20px;
+	text-align: center;
+}
+	
+#paypal{
+float:right;
+}	
+	
+footer{
+	background-color: #e3e3e3;
+	font-size: 14px;
+	text-align: center;
+	padding: 2px;
+	/*line-height: 32px;*/
+	border-radius: 8px;
+}
+
+.objective{
+	float:left;
+	text-align: justify;
+	text-justify: auto;
+	margin-right: 20px;
+}
+
+p.justify{
+text-align:justify;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.italic{
+	font-style: italic;
+}
+
+.bold_italic{
+	font-weight: bold;
+	font-style: italic;
+}
+
+.center{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.center_loader{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height:100px;
+	width:100px;
+	margin-top:100px;
+}
+
+.flag{
+	display: block;
+	margin: auto;
+	width: 250px;
+}
+
+.finances{
+	width: 225px;
+	float:right;
+	margin-left: 10px;
+	text-align: justify;
+}
+
+.company{
+	width: 225px;
+	float:left;
+	margin-right: 35px;
+	text-align: justify;
+}
+
+li.services{
+	width:auto;
+	float:none;
+	text-align: justify;
+	margin-bottom: 15px;
+	/*margin: 0;*/
+}
+
+li.prices{
+	margin-bottom: 12px;
+}

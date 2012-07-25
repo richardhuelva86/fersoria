@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>FERSORIA</title>
+	
+	<style>
+	.black {
+		background-color:#111111;
+		color:silver;
+	}
+</style>
+	<link rel="Shortcut Icon" href="./fersoria.ico" type="image/x-icon" />
+
+	<link href="styles.css" type="text/css" rel="stylesheet"/>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+
+    <script src="./jquery.h5validate.js"></script>
+	
+    <script type="text/javascript" src="./js/scripts.js"></script> 
+    <script type="text/javascript" src="./js/rotar.js"></script>
+	
+	<!-- Librerías idiomas y .js-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
+<script src="js/langpack/en.js" charset="utf-8" type="text/javascript"></script>
+
+<!--Para dar soporte a más lenguajes  incluimos los ficheros correspondientes -->
+<!-- <script src="js/langpack/mo.js" charset="utf-8" type="text/javascript"></script> -->
+	
+	
+    <meta name="description" content="Companies creation and management" />
+    <meta name="keywords" content="FERSORIA,finanzas,ireland,spain" />
+    <meta name="author" content="RMH, MJZR" />
+		
+	<meta property="og:title" content="FERSORIA" />
+	<meta property="og:type" content="company" />
+	<meta property="og:url" content="http://www.fersoria.com" />
+	<meta property="og:image" content="./images/logo.png" />
+	<meta property="og:site_name" content="FERSORIA" />
+	<meta property="fb:admins" content="783479301" />
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
+	
+	<script>
+	
+		//Inicializar objeto de idiomas
+	window.lang = new jquery_lang_js();
+
+	$().ready(function () {
+
+		window.lang.run();
+
+	});
+	
+	
+	
+	$(document).ready(function(){
+	rotar();
+	});
+	</script>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a lang="es" href="index.html">Inicio</a></li>
+			<li><a lang="es" href="javascript:Carga('objetivo.html', 'mainContent');">Objetivo</a></li>
+			<li><a lang="es" href="javascript:Carga('servicios.html', 'mainContent');">Servicios</a></li>
+			<li><a lang="es" href="javascript:Carga('precios.html', 'mainContent');">Precios</a></li>
+			<li><a lang="es" href="javascript:Carga('razones.html', 'mainContent');">¿Irlanda o España?</a></li>
+			<li><a lang="es" href="form_contacto.html">Contacto</a></li>
+		</ul>
+	</nav>
+	<div id="content">
+		<div id="mainContent">
+			<section>
+				<article>				
+					<div>
+						<img id ="foto" width="620" height="305"/>
+					</div>
+				</article>
+				<article>
+					<div style="text-align:center">
+						<span lang="es"><img width="600" src="images/isla.gif" alt="Cree su empresa en Irlanda"/></span>
+					</div>
+				</article>
+				<article>
+					<header><h1 id="main_title" lang="es">Asesoramiento Financiero, Creación de Empresas en Irlanda y España, Registro de Autónomos, Contabilidad, Desarrollo de Páginas Web Corporativas.</h1></header>
+					<p class="justify" lang="es">¿Quiere crear su propia empresa o registrarse como autónomo en Irlanda? ¿Le preocupan sus ahorros? ¿Necesita asesoramiento financiero o contable? Le ofrecemos nuestros servicios profesionales.</p>
+				</article>
+			</section>
+		</div>
+		<aside>
+			<section>
+
+				<img class="center" src="./images/logo.png" alt="Logo Fersoria" />
+				<div id="idiomas">
+				<a href="#" onclick="javascript:window.lang.change('es');"><img src="./images/spanish.png"/></a><a href="#" onclick="javascript:window.lang.change('en');"><img src="./images/english.png"/></a>
+				</div>
+				<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+				<script>
+				new TWTR.Widget({
+				  version: 2,
+				  type: 'profile',
+				  rpp: 4,
+				  interval: 30000,
+				  width: 'auto',
+				  height: 300,
+				  theme: {
+					shell: {
+					  background: '#3804e0',
+					  color: '#ffffff'
+					},
+					tweets: {
+					  background: '#0a396b',
+					  color: '#ffffff',
+					  links: '#07eb22'
+					}
+				  },
+				  features: {
+					scrollbar: true,
+					loop: false,
+					live: true,
+					behavior: 'all'
+				  }
+				}).render().setUser('FERSORIA_Dublin').start();
+				</script>
+				<!--FIN SCRIPT TWITTER -->
+				
+				<!--SCRIPT GOOGLE+ -->
+				<!-- Place this tag where you want the +1 button to render. -->
+				<div class="widget_gp">
+				<div class="g-plusone" data-href="https://plus.google.com/103286745604428610208"></div>
+				</div>
+				<!-- Place this tag after the last +1 button tag. -->
+				<script type="text/javascript">
+				  (function() {
+				    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				    po.src = 'https://apis.google.com/js/plusone.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+				  })();
+				</script>
+				<!--FIN SCRIPT GOOGLE+ -->
+				<div class="widget_min">
+				<div class="fb-like" data-href="http://www.facebook.com/ALEFERSORIA" data-send="true" data-layout="box_count" data-width="auto" data-show-faces="true" data-font="segoe ui"></div>
+				</div>
+			</section>
+		</aside>
+	</div>
+	<footer>
+		<p>© 2012 FERSORIA, Business No. 469936 Registered in the Republic of Ireland, All Rights Reserved </p> 
+	</footer>
+	<div id="logos">
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">
+			<img style="border:0;width:45px" src="images/vcss.gif" alt="Valid CSS!" />
+		</a>
+        <a href="http://www.w3.org/html/logo/">
+            <img src="images/html5.png" width="40" alt="HTML5 Powered with CSS3 / Styling" title="HTML5 Powered with CSS3 / Styling">
+        </a>
+	</div>			
+</body>
+</html>

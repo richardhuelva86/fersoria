@@ -1,0 +1,35 @@
+﻿<p>Si está interesado en alguno de los servicios que FERSORIA ofrece o desea más información, por favor escriba a: <span class="negrita">admin@fersoria.com</span></span</p>
+<form id="myForm" name="contact_form" method="post" action="procesar.php">
+	<p><label for="name"> Nombre y apellidos: </label>
+	<input type="text" id="name" name="name" placeholder="Escriba su nombre" required/></p>
+		
+	<p><label for="email">E-mail: </label>
+	<input type="email" id="email" name="email" placeholder="Escriba su email" required/></p>
+		
+	<p><label for="subject">Asunto: </label>
+	<input type="text" id="subject" name="subject" placeholder="Introduzca el asunto" required/></p>
+		
+	<p><label for="message">Mensaje: </label>
+	<textarea id="message" maxlenght="500" name="message" rows="15" cols="60" required></textarea></p>
+		
+		<input type="submit" value="Enviar"/>
+	</fieldset>
+</form>
+<script type="text/javascript">
+var opciones= {
+                               //beforeSubmit: mostrarLoader, //funcion que se ejecuta antes de enviar el form
+                               success: mostrarRespuesta //funcion que se ejecuta una vez enviado el formulario
+            };
+			
+        $(document).ready(function() {
+            // bind 'myForm' and provide a simple callback function
+
+            $('#myForm').ajaxForm(opciones);
+			
+        });
+		
+		 function mostrarRespuesta (responseText){
+                           alert("Mensaje enviado: "+responseText);  //responseText es lo que devuelve la página contacto.php. Si en contacto.php hacemos echo "Hola" , la variable responseText = "Hola" . Aca hago un alert con el valor de response text
+
+             };
+</script>

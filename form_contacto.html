@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!-- He incluido este formulario como documento independiente porque existen problemas al usar jquery con divs cargados dinámicamente-->
+<html lang="es">
+<head>
+	<meta charset="urf-8"/>
+	<title>FERSORIA</title>
+	<link rel="Shortcut Icon" href="./fersoria.ico" type="image/x-icon" />
+		
+	<link href="styles.css" type="text/css" rel="stylesheet"/>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+
+    <script src="./jquery.h5validate.js"></script>
+	<script>
+	if( (navigator.appName.indexOf("Explorer") == -1)){ //Si el navegador es distinto de IE (Mozilla, Chrome)
+		var opciones= {
+			success: mostrarRespuesta //funcion que se ejecuta una vez enviado el formulario
+		};
+		
+		$(document).ready(function() {
+			$('#myForm').ajaxForm(opciones);
+		});
+			
+		function mostrarRespuesta (responseText){
+			alert(responseText);  //responseText es lo que devuelve la página contacto.php. Si en contacto.php hacemos echo "Hola" , la variable responseText = "Hola" . Aca hago un alert con el valor de response text
+		};
+	}
+	else{ //Si el navegador es IE estamos ante problemas, ya que los formularios HTML5 se comportan distinto en este navegador. No hay validaciones automáticas
+	
+		var opciones= {
+			beforeSubmit:check,
+			success: mostrarRespuesta //funcion que se ejecuta una vez enviado el formulario
+		};
+				
+		$(document).ready(function() {
+			$('#myForm').ajaxForm(opciones);
+		});
+			
+			function check(){
+				/*
+				Por desgracia esto no funciona
+				if ($("#myForm").h5Validate("allValid") === false) {
+					evt.preventDefault();
+				}
+				*/
+				
+				if(!document.getElementById("name").value) {
+					alert("El nombre es obligatorio!");
+					return false;
+				}
+				if(!document.getElementById("email").value) {
+					alert("El Email es obligatorio!");
+					return false;
+				}
+				
+				if(document.getElementById("email").value) {
+					var expr = new RegExp(/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/);
+					if(!expr.test(document.getElementById("email").value))
+					{
+						alert("El Email no tiene un formato correcto!");
+						return false;
+					}
+					
+				}
+				
+				if(!document.getElementById("subject").value) {
+					alert("El Asunto es obligatorio!");
+					return false;
+				}
+				if(!document.getElementById("message").value) {
+					alert("El Mensaje es obligatorio!");
+					return false;
+				}
+			
+				
+				
+			}
+			 function mostrarRespuesta (responseText){
+							   alert(responseText);  //responseText es lo que devuelve la página contacto.php. Si en contacto.php hacemos echo "Hola" , la variable responseText = "Hola" . Aca hago un alert con el valor de response text
+
+				 };
+	
+	
+	}
+	</script>
+	
+	<script>
+	(function($){
+		$.fn.extend({
+			color:function(){
+				this.each(function(){
+				{
+					alert("Hi");
+					var $this = jQuery(this);
+					$this.css("color","red");
+					
+				}
+					
+				});
+				
+			}
+			});
+	})(jQuery);
+	
+	$(document).ready(function(){
+		$('#div').color();
+	
+	})
+	
+	</script>
+	
+	
+	
+	
+    <script type="text/javascript" src="./js/scripts.js"></script> 
+    <meta name="description" content="Companies creation and management" />
+    <meta name="keywords" content="FERSORIA,finanzas,ireland,spain" />
+    <meta name="author" content="RMH, MJZR" />
+		
+	<meta property="og:title" content="FERSORIA" />
+	<meta property="og:type" content="company" />
+	<meta property="og:url" content="http://www.fersoria.com/FERSORIA/" />
+	<meta property="og:image" content="ftp://u66609684&#064;nocheiberica.com/RICHARD/images/logo%20original%20registrado.jpg" />
+	<meta property="og:site_name" content="FERSORIA" />
+	<meta property="fb:admins" content="783479301" />
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="javascript:Carga('objetivo.html', 'mainContent');">Objetivos</a></li>
+			<li><a href="javascript:Carga('servicios.html', 'mainContent');">Servicios</a></li>
+			<li><a href="javascript:Carga('precios.html', 'mainContent');">Precios</a></li>
+			<li><a href="javascript:Carga('razones.html', 'mainContent');">¿Irlanda o España?</a></li>
+			<li><a href="form_contacto.html">Contacto</a></li>
+		</ul>
+	</nav>
+	<div id="content">
+		<div id="mainContent">
+			<p>Si está interesado en alguno de los servicios que <span class="bold">FERSORIA</span> ofrece o desea más información, por favor rellene el siguiente formulario:</span</p>
+<form id="myForm" name="contact_form" method="post" action="procesar.php">
+	<p>
+	<input type="text" id="name" name="name" placeholder="Escriba su nombre" required title="El nombre y los apellidos son obligatorios" /><label for="name"> Nombre y apellidos </label></p>
+		
+	<p>
+	<input type="email" id="email" name="email" placeholder="Escriba su email" required title ="El email es obligatorio"/><label for="email">E-mail </label></p>
+		
+	<p>
+	<input type="text" id="subject" name="subject" placeholder="Introduzca el asunto" required title ="El asunto es obligatorio" /><label for="subject">Asunto </label></p>
+		
+	<p>
+	<textarea id="message" maxlenght="500" name="message" rows="10 cols="150" required title ="El mensaje es obligatorio"></textarea>	<label for="message">Mensaje </label></p>
+		
+		<input type="submit" value="Enviar"/>
+	</fieldset>
+</form>
+		</div>
+		<aside>
+			<section>
+				<img class="center" src="./images/logo.png" alt="Logo Fersoria" />
+				<div id="idiomas">
+				<img src="./images/spanish.png"/><img src="./images/english.png"/>
+				</div>
+				<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+				<script>
+				new TWTR.Widget({
+				  version: 2,
+				  type: 'profile',
+				  rpp: 4,
+				  interval: 30000,
+				  width: 'auto',
+				  height: 300,
+				  theme: {
+					shell: {
+					  background: '#3804e0',
+					  color: '#ffffff'
+					},
+					tweets: {
+					  background: '#0a396b',
+					  color: '#ffffff',
+					  links: '#07eb22'
+					}
+				  },
+				  features: {
+					scrollbar: true,
+					loop: false,
+					live: true,
+					behavior: 'all'
+				  }
+				}).render().setUser('FERSORIA_Dublin').start();
+				</script>
+				<!--FIN SCRIPT TWITTER -->
+				<!--SCRIPT GOOGLE+ -->
+				<!-- Place this tag where you want the +1 button to render. -->
+				<div class="widget_gp">
+				<div class="g-plusone" data-href="https://plus.google.com/103286745604428610208"></div>
+				</div>
+				<!-- Place this tag after the last +1 button tag. -->
+				<script type="text/javascript">
+				  (function() {
+				    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				    po.src = 'https://apis.google.com/js/plusone.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+				  })();
+				</script>
+				<!--FIN SCRIPT GOOGLE+ -->
+				<div class="widget_min">
+				<div class="fb-like" data-href="http://www.facebook.com/ALEFERSORIA" data-send="true" data-layout="box_count" data-width="auto" data-show-faces="true" data-font="segoe ui"></div>
+				</div>
+			</section>
+		</aside>
+	</div>
+	<footer>
+		<p>© 2012 FERSORIA, Business No. 469936 Registered in the Republic of Ireland, All Rights Reserved </p> 
+	</footer>
+	<div id="logos">
+		<a href="http://jigsaw.w3.org/css-validator/check/referer">
+			<img style="border:0;width:45px" src="images/vcss.gif" alt="Valid CSS!" />
+		</a>
+        <a href="http://www.w3.org/html/logo/">
+            <img src="images/html5.png" width="40" alt="HTML5 Powered with CSS3 / Styling" title="HTML5 Powered with CSS3 / Styling">
+        </a>
+	</div>			
+</body>
+</html>
